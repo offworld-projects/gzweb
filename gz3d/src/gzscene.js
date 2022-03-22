@@ -55,7 +55,7 @@ GZ3D.Scene.prototype.init = function()
  var width = this.getDomElement().width;
  var height = this.getDomElement().height;
  this.camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000);
- this.defaultCameraPosition = new THREE.Vector3(0, 0, 5);
+ this.defaultCameraPosition = new THREE.Vector3(-2, 0, 7);
  this.camera.lookAt(new THREE.Vector3( 0, 0, 0 ));
  this.resetView();
 
