@@ -51,12 +51,13 @@ GZ3D.Scene.prototype.init = function()
   this.ambient = new THREE.AmbientLight( 0x666666 );
   this.scene.add(this.ambient);
 
-  // camera
-  var width = this.getDomElement().width;
-  var height = this.getDomElement().height;
-  this.camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000);
-  this.defaultCameraPosition = new THREE.Vector3(0, -5, 5);
-  this.resetView();
+ // camera
+ var width = this.getDomElement().width;
+ var height = this.getDomElement().height;
+ this.camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000);
+ this.defaultCameraPosition = new THREE.Vector3(0, 0, 5);
+ this.camera.lookAt(new THREE.Vector3( 0, 0, 0 ));
+ this.resetView();
 
   // Ortho camera and scene for rendering sprites
   // Currently only used for the radial menu
